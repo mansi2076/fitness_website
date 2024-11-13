@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="yoga.css">
+</head>
+<body>
+    <div class="heading-container">
+        <h1>Fitness Center</h1>
+        <nav class="nav-container">
+            <a href="homepage.html">Home</a>
+            <a href="diet.html">Diet</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </div>
+    <div class="background-container">
+        <div class="heading">"Stretch Your Limits, Calm Your Mind."</div>
+        <div class="circle-container">
+            <div class="image-slider">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLxI3GkptGrQ5TD68Cmdbzo-UaORH5finnTA&s" alt="Image 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROz7fN9R9LJojSsvipZmfewOpNoapNCHRGJQ&s" alt="Image 2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBSRpu2sKBnTNmBxcnrZEcgU-owGZQl7gZMA&s" alt="Image 3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJg2fLm4cHSqID0iGzkWP2YvIJ3fjZR0ffZg&s" alt="Image 4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReJR0qR_jwkbhsc4frMzg1PEf4PX8PPatCLg&s" alt="Image 5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTD0POafj4ufHuEVkCRO7MsAGlbOyKnGyDQQ&s" alt="Image 6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr_3RWKwD3AO4zL5E8QEKQ-KCjEq_4poS8_A&s" alt="Image 7">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCa9s9f9HzrUjS7N8Yk3IhG01dLcjTbRMy7A&s" alt="Image 8">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNk4tkq5DuqWGx1sU04weHu2g4h2E5UDoYLg&s" alt="Image 9">
+            </div>
+        </div>
+    </div>
+
+    <div class="second-background-container">
+        <div class="section-text">
+            <h2 style="font-family: cursive;font-weight: bold;font-size: 30px;">
+                Thousands of Yoga Practices to Inspire and Uplift</h2>
+            <p>High-quality on demand yoga, meditation and breathwork classes to meet you where you are, on your schedule.</p>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-button left" onclick="scrollImages('left')">&#9664;</div>
+            <div class="image-block-container">
+                <a href="page1.html" class="image-block">
+                    <img src="https://cdn.yogajournal.com/wp-content/uploads/2007/08/dolphin-pose_andrew-clark.jpg?crop=16:9&width=1500" alt="Image 1">
+                    <div class="image-text">Dolphin Pose</div>
+                </a>
+                <a href="suryanamaskar.html" class="image-block">
+                    <img src="https://assets.gqindia.com/photos/5d0b856615464122c35969e5/4:3/w_1440,h_1080,c_limit/International%20Yoga%20Day-All%20the%20health%20benefits%20of%20Surya%20Namaskar.jpg" alt="Image 1">
+                    <div class="image-text">Surya Namaskar</div>
+                </a>
+                <a href="page1.html" class="image-block">
+                    <img src="https://cdn.yogajournal.com/wp-content/uploads/2008/02/High-Lunge_Andrew-Clark.jpg?crop=16:9&width=1500" alt="Image 1">
+                    <div class="image-text">High Lunge</div>
+                </a>
+                <a href="page1.html" class="image-block">
+                    <img src="https://cdn.yogajournal.com/wp-content/uploads/2021/10/Revolved-Triangle-Pose_Andrew-Clark.jpg?crop=535:301&width=1070&enable=upscale" alt="Image 1">
+                    <div class="image-text">Revolved Triangle Pose</div>
+                </a>
+                <a href="page1.html" class="image-block">
+                    <img src="data:image/jpeg;base64,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" alt="Image 1">
+                    <div class="image-text">Tadasana</div>
+                </a>
+                <a href="page1.html" class="image-block">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrFitW6JNZLY5k_2KxzqgCobFpS0K8Wg1Dow&s" alt="Image 1">
+                    <div class="image-text">Virabhadrasana 1</div>
+                </a>
+                <a href="page1.html" class="image-block">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4x_XNqmCvX-mNYIVn1tm1KZ99JAbGlYMkJQ&s" alt="Image 1">
+                    <div class="image-text">Virabhadrasana 2</div>
+                </a>              
+                <a href="page3.html" class="image-block">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyqNmgjAIlcd4kk7jx3F0YGFPiW1FcOM8v3A&s" alt="Image 3">
+                    <div class="image-text">Malasana</div>
+                </a>
+                <a href="page4.html" class="image-block">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD8_fhW87c9snGOcWmo-s1wIdrjlaLqt32LQ&s" alt="Image 4">
+                    <div class="image-text">Uttanasana</div>
+                </a>
+            </div>
+            <div class="scroll-button right" onclick="scrollImages('right')">&#9654;</div>
+        </div>
+    </div>
+
+    <script src="yoga.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPCBsKUHDoGgwnaXtMgDzU8ce-eNTyN3nKIA&s");
+}
+.container {
+    text-align: center;
+}
+.photo {
+    width: 85%;
+    max-width: 600px;
+}
+.horizontal-line {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 2px solid #000;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.checkbox-container input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.checkbox-container label {
+    font-size: 1.5em;
+    color: #333;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.count {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content:center
+}
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    
+}

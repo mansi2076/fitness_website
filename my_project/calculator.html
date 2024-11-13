@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-container">
+        <div class="heading-container">
+            <h1>Fitness Center</h1>
+        </div>
+        
+        <nav class="nav-container">
+            <a href="homepage.html">Home</a>
+            <a href="diet.html">Diet</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+    <main class="main-container">
+
+    <div class="calculator-container">
+        <h2>Fitness Calculator</h2>
+        <form id="fitness-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+            
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required><br>
+            
+            <label for="height-feet">Height:</label>
+            <div class="height-container">
+                <input type="number" id="height-feet" name="height-feet" placeholder="Feet" required>
+                <input type="number" id="height-inches" name="height-inches" placeholder="Inches" required>
+            </div><br>
+            
+            <label>Sex:</label>
+            <div class="sex-container">
+                <input type="radio" id="male" name="sex" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="female" required>
+                <label for="female">Female</label>
+            </div><br>
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" name="activity" required>
+                <option value="1.2">Sedentary (little or no exercise)</option>
+                <option value="1.375">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                <option value="1.55">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                <option value="1.725">Very Active (hard exercise/sports 6-7 days a week)</option>
+                <option value="1.9">Super Active (very hard exercise/sports & physical job)</option>
+            </select><br>
+            
+            <button type="button" id="calculate-button">Calculate</button>
+        </form>
+        
+        <div id="results">
+            <p id="average-weight-result"></p>
+            <p id="calories-result"></p>
+            <p id="calories-goal-result"></p>
+        </div>
+        <div id="feedback" class="hidden">
+            <p id="success-message" class="success-message"></p>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    </div>
+
+
+
+    <h1 style="color:rgb(210, 94, 12);text-align: center;">Lets check your diet plan</h1>
+    <div class="block-image">
+        <a href="diet2.html" class="image-container left-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfDjXQCxJF2vVN1n2p6E1ClizcQ8T5IZYpw&s">
+            <div class="overlay-text">"Increase Your Weight - View Weight Gain Diet Plan"</div>
+        </a>
+        <a href="diet.html" class="image-container right-image">
+            <img src="https://img.freepik.com/free-photo/fresh-colourful-ingredients-mexican-cuisine_23-2148254294.jpg" >
+            <div class="overlay-text">"Decrease Your Weight - View Weight Gain Diet Plan"</div>
+        </a>      
+    </div>
+
+
+    <div class="products-section">
+        <h1 class="bold-heading">Not Sure Where To Start ??</h1>
+        <h3 class="light-heading">Programs offer day-to-day guidance on an interactive calendar to keep you on track.</h3>
+        <div class="blocks-container">
+            <div class="product-block">
+                <img src="https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-15649-fitness-blenders-free-2-week-challenge-98aa.jpg" alt="Product 1">
+                <h4 class="bold-title">Fitness Blender’s 2 Week Challenge</h4>
+                <h5 class="light-title">Strength Training, Cardio, and Mobility Workouts for a Strong Body and Mind</h5>
+                <p style="color:blue">31 Min/Day • 2 Weeks</p>
+                <hr>
+                <div class="pricing">
+                    <span class="left-text">Price: $20.00</span>
+                    <span class="right-text" style="color: blue;">Offer Price: $15.00</span>
+                </div>
+                <button class="add-to-bag">Add to Bag <span class="sticker">🛒</span></button>
+            </div>
+
+            <div class="product-block">
+                <img src="https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-15647-5-day-challenge-trainer-series-essentials-with-erica-8eba.jpg" alt="Product 2">
+                <h4 class="bold-title">5 Day Challenge Trainer Series: Essentials with Erica</h4>
+                <h5 class="light-title">Beginner-Friendly Total Body Strength Training with Cardio</h5>
+                <p style="color: blue;">35 Min/Day • 1 Week</p>
+                <hr>
+                <div class="pricing">
+                    <span class="left-text">Price: $25.00</span>
+                    <span class="right-text" style="color: blue;">Offer Price: $20.00</span>
+                </div>
+                <button class="add-to-bag">Add to Bag <span class="sticker">🛒</span></button>
+            </div>
+
+            <div class="product-block">
+                <img src="https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-15454-5-day-challenge-trainer-series-level-up-with-tasha-a267.jpg" alt="Product 3">
+                <h4 class="bold-title">5 Day Challenge Trainer Series: Level Up with Tasha</h4>
+                <h5 class="light-title">Time Under Tension Strength with Cardio for Muscle Growth</h5>
+                <p style="color: blue;">42 Min/Day • 1 Week</p>
+                <hr>
+                <div class="pricing">
+                    <span class="left-text">Price: $30.00</span>
+                    <span class="right-text" style="color: blue;">Offer Price: $25.00</span>
+                </div>
+                <button class="add-to-bag">Add to Bag <span class="sticker">🛒</span></button>
+            </div>
+
+            <div class="product-block">
+                <img src="https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-17367-fb-fit-round-4-strength-hiit-cardio-and-mobility-aa11.jpg" alt="Product 4">
+                <h4 class="bold-title">FB Fit Round 4: Strength, HIIT Cardio, & Mobility</h4>
+                <h5 class="light-title">Intense, Lengthy Workouts: Our Most Challenging Program Yet?</h5>
+                <p style="color: blue;">48 Min/Day • 4 Weeks</p>
+                <hr>
+                <div class="pricing">
+                   
+                    <span class="left-text">Price: $35.00</span>
+                    <span class="right-text" style="color: blue;">Offer Price: $30.00</span>
+                </div>
+                <button class="add-to-bag">Add to Bag <span class="sticker">🛒</span></button>
+            </div>
+        </div>
+    </div>
+    </main>
+    <script src="calculator.js"></script>
+</body>
+</html>

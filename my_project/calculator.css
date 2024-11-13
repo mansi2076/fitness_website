@@ -1,0 +1,216 @@
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.header-container {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.header-container .heading-container h1 {
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-container a:hover {
+    color:palevioletred;
+}
+
+.calculator-container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+#fitness-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#fitness-form input,
+#fitness-form select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.height-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#fitness-form input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.sex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#fitness-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#fitness-form button:hover {
+    background-color: #555;
+}
+
+#results p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+.main-container {
+   
+    background-size: cover;
+    padding: 40px 20px;
+    min-height: calc(100vh - 100px);
+}
+.products-section {
+    background-color: #f0f0f0;
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.bold-heading {
+    color: black;}
+
+    .light-heading {
+        color: gray;
+        }
+        
+        .blocks-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        }
+        
+        .product-block {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: left;
+        width: 20%; /* Adjust width as needed */
+        margin: 10px 0;
+        }
+        
+        .product-block img {
+        width: 100%;
+        border-radius: 5px;
+        }
+        
+        .bold-title {
+        font-weight: bold;
+        }
+        
+        .light-title {
+        color: gray;
+        }
+        
+        .pricing {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        }
+        
+        .left-text {
+        font-weight: bold;
+        }
+        
+        .right-text {
+        color: gray;
+        }
+        
+        .add-to-bag {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        }
+        
+        .add-to-bag
+        {
+        background-color: #0947c1;
+        }
+
+ 
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(44, 94, 106);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+   
+   
+}
+
+.image-container img {
+    display: block;
+    width:650px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+  
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.block-image{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   
+   
+}

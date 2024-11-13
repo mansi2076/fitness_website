@@ -1,0 +1,80 @@
+h1{
+    font-family: 'Cinzel', serif;
+    font-size:30px;
+    font-weight:bold;
+    color:black;
+    
+}
+
+h2,h3{
+    text-align:center;
+}
+
+
+
+.button{
+    display:inline-block;
+    background-color:gray;
+    color:white;
+    padding:5px 20px;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:30px;
+    transition:background-color 0.3s ease;
+    animation:blink 1s infinite;
+    width:30%;
+    text-align:center;
+    line-height:2;
+    margin:0 auto;
+    
+}
+
+@keyframes blink{
+    50% {
+        background-color:transparent;
+
+    }
+}
+
+.button:hover{
+    background: color blue;
+    animation:none;
+}
+
+
+  
+
+.block{
+    background-color:lightgray;
+    padding:120px;
+    border:1px solid #ddd;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.image {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    gap:5px;
+    
+}
+
+
+.image img {
+    border-radius: 15px; 
+    width: 300px;
+    height: auto;
+    margin-left: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.image img:hover {
+    transform: perspective(1000px) rotateY(10deg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+  

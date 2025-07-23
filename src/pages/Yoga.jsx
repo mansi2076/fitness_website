@@ -23,6 +23,9 @@ const Yoga = () => {
     { value: 'power', label: 'Power Yoga' },
     { value: 'yin', label: 'Yin' },
     { value: 'restorative', label: 'Restorative' },
+    { value: 'ashtanga', label: 'Ashtanga' },
+    { value: 'iyengar', label: 'Iyengar' },
+    { value: 'kundalini', label: 'Kundalini' },
   ];
 
   const difficulties = [
@@ -32,17 +35,18 @@ const Yoga = () => {
     { value: 'advanced', label: 'Advanced' },
   ];
 
-  // Sample yoga workouts data
+  // Updated with authentic yoga practices
   const sampleWorkouts = [
     {
       _id: '1',
-      title: 'Morning Sun Salutation',
-      description: 'Energize your body and mind with this classic morning sequence',
+      title: 'Surya Namaskar (Sun Salutation)',
+      hindiName: 'सूर्य नमस्कार',
+      description: 'A sequence of 12 powerful yoga poses that provide a great cardiovascular workout',
       category: 'yoga',
       difficulty: 'beginner',
-      duration: 20,
-      image: 'https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
+      duration: 15,
+      image: 'https://assets.gqindia.com/photos/5d0b8563154641deba5969e3/16:9/w_2560%2Cc_limit/International%2520Yoga%2520Day-All%2520the%2520health%2520benefits%2520of%2520Surya%2520Namaskar.jpg',
+      videoUrl: 'https://youtu.be/YAq_oCjnkWY?si=owxqII57wFlXNPq6',
       timeOfDay: 'morning',
       yogaType: 'hatha',
       targetMuscles: ['Full Body', 'Core', 'Flexibility'],
@@ -51,79 +55,181 @@ const Yoga = () => {
     },
     {
       _id: '2',
-      title: 'Power Vinyasa Flow',
-      description: 'Build strength and flexibility with this dynamic flowing sequence',
+      title: 'Vinyasa Flow',
+      hindiName: 'विन्यास योग',
+      description: 'Dynamic sequence of poses synchronized with breath to build heat and endurance',
       category: 'yoga',
       difficulty: 'intermediate',
       duration: 45,
-      image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://poweryogacanada.com/wp-content/uploads/2021/12/200TT-068.jpg',
       videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
-      timeOfDay: 'afternoon',
+      timeOfDay: 'morning',
       yogaType: 'vinyasa',
       targetMuscles: ['Arms', 'Core', 'Legs'],
-      equipment: ['Yoga Mat', 'Blocks'],
+      equipment: ['Yoga Mat'],
       caloriesBurned: 300,
     },
     {
       _id: '3',
-      title: 'Evening Wind Down',
-      description: 'Gentle stretches and poses to release tension and prepare for sleep',
+      title: 'Balasana (Child\'s Pose)',
+      hindiName: 'बालासन',
+      description: 'Gentle resting pose that calms the mind and relieves stress and fatigue',
       category: 'yoga',
       difficulty: 'beginner',
-      duration: 30,
-      image: 'https://images.pexels.com/photos/3822928/pexels-photo-3822928.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
+      duration: 5,
+      image: 'https://images.healthshots.com/healthshots/en/uploads/2023/11/13110400/balasana-1.jpg',
+      videoUrl: 'https://www.youtube.com/embed/2MJGg-dUKh0',
       timeOfDay: 'evening',
       yogaType: 'restorative',
-      targetMuscles: ['Hips', 'Spine', 'Shoulders'],
-      equipment: ['Yoga Mat', 'Bolster'],
-      caloriesBurned: 120,
+      targetMuscles: ['Hips', 'Thighs', 'Back'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 20,
     },
     {
       _id: '4',
-      title: 'Post-Meal Gentle Flow',
-      description: 'Light movements to aid digestion and maintain energy',
+      title: 'Tadasana (Mountain Pose)',
+      hindiName: 'ताड़ासन',
+      description: 'Foundation of all standing poses, improves posture and balance',
       category: 'yoga',
       difficulty: 'beginner',
-      duration: 15,
-      image: 'https://images.pexels.com/photos/3822647/pexels-photo-3822647.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
-      timeOfDay: 'afternoon',
-      yogaType: 'yin',
-      targetMuscles: ['Core', 'Hips'],
+      duration: 5,
+      image: 'https://artimg.gympik.com/articles/wp-content/uploads/2017/08/Tadasana-Yoga-for-Glowing-Skin1.png',
+      videoUrl: 'https://www.youtube.com/embed/0dK1lz3J9W8',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Core', 'Spine'],
       equipment: ['Yoga Mat'],
-      caloriesBurned: 80,
+      caloriesBurned: 30,
     },
     {
       _id: '5',
-      title: 'Advanced Power Yoga',
-      description: 'Challenge yourself with this intense strength-building practice',
+      title: 'Adho Mukha Svanasana (Downward Dog)',
+      hindiName: 'अधो मुख श्वानासन',
+      description: 'Inversion pose that stretches and strengthens the entire body',
       category: 'yoga',
-      difficulty: 'advanced',
-      duration: 60,
-      image: 'https://images.pexels.com/photos/3823160/pexels-photo-3823160.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://miro.medium.com/v2/resize:fit:1400/1*tE3y72ROkd3B2X-T_5xNJg.png',
+      videoUrl: 'https://www.youtube.com/embed/Xi--eXXQYqY',
       timeOfDay: 'morning',
-      yogaType: 'power',
-      targetMuscles: ['Full Body', 'Core', 'Balance'],
-      equipment: ['Yoga Mat', 'Blocks', 'Strap'],
-      caloriesBurned: 400,
+      yogaType: 'hatha',
+      targetMuscles: ['Hamstrings', 'Shoulders', 'Arms'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 40,
     },
     {
       _id: '6',
-      title: 'Night Time Yin Yoga',
-      description: 'Deep relaxation and stress relief for better sleep',
+      title: 'Virabhadrasana II (Warrior II)',
+      hindiName: 'वीरभद्रासन II',
+      description: 'Powerful standing pose that builds stamina and concentration',
       category: 'yoga',
       difficulty: 'beginner',
-      duration: 40,
-      image: 'https://images.pexels.com/photos/3823164/pexels-photo-3823164.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
-      timeOfDay: 'night',
-      yogaType: 'yin',
-      targetMuscles: ['Hips', 'Spine', 'Nervous System'],
-      equipment: ['Yoga Mat', 'Bolster', 'Blanket'],
-      caloriesBurned: 100,
+      duration: 5,
+      image: 'https://www.gaia.com/wp-content/uploads/WarriorII_ColleenSaidman.jpg',
+      videoUrl: 'https://www.youtube.com/embed/4WQOqHX5X2U',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Hips', 'Shoulders'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 50,
     },
+    {
+      _id: '7',
+      title: 'Bhujangasana (Cobra Pose)',
+      hindiName: 'भुजंगासन',
+      description: 'Gentle backbend that strengthens the spine and opens the chest',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://rishikeshashtangayogaschool.com/blog/wp-content/uploads/2021/11/cobra-pose_11zon.jpg',
+      videoUrl: 'https://www.youtube.com/embed/fOdrW7nf9gw',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Back', 'Chest', 'Shoulders'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 30,
+    },
+    {
+      _id: '8',
+      title: 'Savasana (Corpse Pose)',
+      hindiName: 'शवासन',
+      description: 'Final relaxation pose that allows the body to absorb benefits of practice',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 10,
+      image: 'https://wp.insighttimer.com/blog/wp-content/uploads/2020/02/savasana-in-yoga.jpg',
+      videoUrl: 'https://www.youtube.com/embed/8lyQimR0k5A',
+      timeOfDay: 'night',
+      yogaType: 'restorative',
+      targetMuscles: ['Full Body Relaxation'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 10,
+    },
+    {
+      _id: '9',
+      title: 'Trikonasana (Triangle Pose)',
+      hindiName: 'त्रिकोणासन',
+      description: 'Standing pose that improves balance and stretches the sides of the body',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 5,
+      image: 'https://vinyasayogaacademy.com/blog/wp-content/uploads/2020/03/triangle-pose.jpg',
+      videoUrl: 'https://www.youtube.com/embed/S6D4Jc0vF5I',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Hips', 'Side Body'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 40,
+    },
+    {
+      _id: '10',
+      title: 'Sirsasana (Headstand)',
+      hindiName: 'शीर्षासन',
+      description: 'Advanced inversion that improves circulation and focus',
+      category: 'yoga',
+      difficulty: 'advanced',
+      duration: 5,
+      image: 'https://zuda.b-cdn.net/wp-content/uploads/2023/01/Salamba-Sirsasana.png',
+      videoUrl: 'https://www.youtube.com/embed/6oxScpLByvA',
+      timeOfDay: 'morning',
+      yogaType: 'ashtanga',
+      targetMuscles: ['Shoulders', 'Arms', 'Core'],
+      equipment: ['Yoga Mat', 'Wall Support'],
+      caloriesBurned: 60,
+    },
+    {
+      _id: '11',
+      title: 'Padmasana (Lotus Pose)',
+      hindiName: 'पद्मासन',
+      description: 'Classic meditation pose that promotes calmness and focus',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 10,
+      image: 'https://www.yogateket.com/image/original/Padmasana_lotus.jpg',
+      videoUrl: 'https://www.youtube.com/embed/b8UFi9QlH8I',
+      timeOfDay: 'evening',
+      yogaType: 'hatha',
+      targetMuscles: ['Hips', 'Knees', 'Ankles'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 20,
+    },
+    {
+      _id: '12',
+      title: 'Dhanurasana (Bow Pose)',
+      hindiName: 'धनुरासन',
+      description: 'Backbend that strengthens the back and opens the chest',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 5,
+      image: 'https://www.vinyasayogaashram.com/blog/wp-content/uploads/2021/04/dhanurasana.jpg',
+      videoUrl: 'https://www.youtube.com/embed/J7KODSXWgtw',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Back', 'Shoulders', 'Chest'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 50,
+    },
+    
   ];
 
   useEffect(() => {
@@ -162,41 +268,46 @@ const Yoga = () => {
         </div>
 
         {/* Featured Session */}
-        <div className="mb-12 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl overflow-hidden shadow-xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">Featured Today</h2>
-              <h3 className="text-2xl mb-4">Morning Energizer Flow</h3>
-              <p className="mb-6 text-primary-100">
-                Start your day with this invigorating 30-minute sequence designed to awaken your body and mind.
-              </p>
-              <div className="flex items-center space-x-6 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">30</div>
-                  <div className="text-sm text-primary-200">minutes</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">200</div>
-                  <div className="text-sm text-primary-200">calories</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">★</div>
-                  <div className="text-sm text-primary-200">beginner</div>
-                </div>
-              </div>
-              <button className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Session
-              </button>
-            </div>
-            <div className="h-64 md:h-full">
-              <img
-                src="https://images.pexels.com/photos/3823158/pexels-photo-3823158.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Featured yoga session"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+<div className="mb-12 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl overflow-hidden shadow-xl">
+  <div className="grid md:grid-cols-2 gap-8 items-center">
+    {/* Left Side - Updated Content */}
+    <div className="p-8 text-white">
+      <h2 className="text-3xl font-bold mb-4">Why Practice Yoga?</h2>
+      <h3 className="text-2xl mb-4">Balance, Flexibility & Peace of Mind</h3>
+      <p className="mb-6 text-primary-100">
+        Yoga is more than just physical movement — it’s a way to harmonize your mind, body, and spirit.
+        Through mindful breathing, posture, and meditation, yoga helps reduce stress, improve flexibility,
+        and build inner strength. Whether you're just starting or deep in your practice, each session brings
+        calm and clarity to your daily life.
+      </p>
+      <div className="flex items-center space-x-6 mb-6">
+        <div className="text-center">
+          <div className="text-2xl font-bold">10+</div>
+          <div className="text-sm text-primary-200">styles</div>
         </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold">365</div>
+          <div className="text-sm text-primary-200">days wellness</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold">∞</div>
+          <div className="text-sm text-primary-200">inner peace</div>
+        </div>
+      </div>
+      
+    </div>
+
+    {/* Right Side - Image remains unchanged */}
+    <div className="h-64 md:h-full">
+      <img
+        src="https://www.guardian.in/cdn/shop/articles/yoga-asans-for-weight-loss.jpg?v=1705486602"
+        alt="Featured yoga session"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</div>
+
 
         {/* Filters */}
         <div className="mb-8 space-y-6">
@@ -292,6 +403,9 @@ const Yoga = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {workout.title}
                 </h3>
+                {workout.hindiName && (
+                  <p className="text-gray-500 text-sm mb-1">{workout.hindiName}</p>
+                )}
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   {workout.description}
                 </p>

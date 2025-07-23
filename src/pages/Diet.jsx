@@ -53,7 +53,7 @@ const Diet = () => {
         'Add more almond milk if needed for desired consistency',
         'Pour into a glass and serve immediately'
       ],
-      image: 'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://s.lightorangebean.com/media/20240914152712/Green-Power-Smoothie_done.png.webp',
       prepTime: 5,
       cookTime: 0,
       servings: 1,
@@ -122,7 +122,7 @@ const Diet = () => {
         'Grill asparagus 3-4 minutes, turning frequently',
         'Serve with lemon slices and fresh dill'
       ],
-      image: 'https://images.pexels.com/photos/3633242/pexels-photo-3633242.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://food-guide.canada.ca/sites/default/files/2020-07/grilled_salmon.jpg',
       prepTime: 10,
       cookTime: 15,
       servings: 1,
@@ -158,7 +158,7 @@ const Diet = () => {
         'Stir in coconut milk and season with salt and pepper',
         'Garnish with fresh cilantro before serving'
       ],
-      image: 'https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://static01.nyt.com/images/2020/12/13/dining/aw-chicken-and-rice-soup-with-turmeric-and-ginger/merlin_166828779_35a6b5cf-3582-410f-9ca8-aa4e82e4a376-threeByTwoLargeAt2X.jpg',
       prepTime: 15,
       cookTime: 25,
       servings: 4,
@@ -189,7 +189,7 @@ const Diet = () => {
         'Check consistency and add more almond milk if needed',
         'Pour into a glass and enjoy immediately'
       ],
-      image: 'https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://kristineskitchenblog.com/wp-content/uploads/2024/05/chocolate-protein-shake-recipe-02.jpg',
       prepTime: 3,
       cookTime: 0,
       servings: 1,
@@ -225,7 +225,7 @@ const Diet = () => {
         'Slice chicken and assemble bowl with rice, vegetables, and avocado',
         'Drizzle with balsamic vinegar before serving'
       ],
-      image: 'https://images.pexels.com/photos/2232433/pexels-photo-2232433.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      image: 'https://scontent.fdel29-1.fna.fbcdn.net/v/t39.30808-6/475772754_1138645941240279_5884050407854632991_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=VX7-_p8kKSwQ7kNvwF6pZmd&_nc_oc=AdmuQitzaOSA0kY7wVovFE_dWgUwdhIkK-fzgEk23Rj5V4Ie0dCZnFo7mDjcVrA2VKU&_nc_zt=23&_nc_ht=scontent.fdel29-1.fna&_nc_gid=Kt8x03tLAKU8HcojYfHKNw&oh=00_AfQtKGtO88XlDWdRYWbD1oeinVtblpW7iF9vEbdPUfXFPw&oe=6883F00D',
       prepTime: 15,
       cookTime: 25,
       servings: 1,

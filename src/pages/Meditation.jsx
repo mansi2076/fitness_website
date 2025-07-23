@@ -20,7 +20,7 @@ const Meditation = () => {
     { value: 'energetic', label: 'Energetic', color: 'bg-orange-500' },
   ];
 
-  // Sample meditation data
+  // Updated meditation data with mood-appropriate audio files
   const sampleMeditations = [
     {
       _id: '1',
@@ -28,7 +28,7 @@ const Meditation = () => {
       description: 'Start your day with clarity and purpose through this gentle morning meditation.',
       mood: 'calm',
       duration: 10,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Calm nature sounds
       image: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'mindfulness',
       instructor: 'Sarah Mitchell',
@@ -39,7 +39,7 @@ const Meditation = () => {
       description: 'Release tension and anxiety with focused breathing techniques.',
       mood: 'stressed',
       duration: 15,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Soothing piano
       image: 'https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'breathing',
       instructor: 'Michael Chen',
@@ -50,7 +50,7 @@ const Meditation = () => {
       description: 'Cultivate positive emotions and boost your mood with this uplifting session.',
       mood: 'happy',
       duration: 12,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',  // Uplifting melody
       image: 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'visualization',
       instructor: 'Emma Rodriguez',
@@ -61,7 +61,7 @@ const Meditation = () => {
       description: 'Find comfort and peace during difficult times with gentle guided meditation.',
       mood: 'sad',
       duration: 20,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3', // Soft, comforting tones
       image: 'https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'loving-kindness',
       instructor: 'David Kumar',
@@ -72,7 +72,7 @@ const Meditation = () => {
       description: 'Transform anger into understanding and inner peace through mindful awareness.',
       mood: 'angry',
       duration: 18,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3', // Grounding, intense then calming
       image: 'https://images.pexels.com/photos/4498318/pexels-photo-4498318.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'mindfulness',
       instructor: 'Lisa Thompson',
@@ -83,10 +83,32 @@ const Meditation = () => {
       description: 'Revitalize your mind and body with this energizing meditation practice.',
       mood: 'energetic',
       duration: 8,
-      audioUrl: 'https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3',
+     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3',// Upbeat, energizing rhythm
       image: 'https://images.pexels.com/photos/3823495/pexels-photo-3823495.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
       category: 'visualization',
       instructor: 'Alex Park',
+    },
+    {
+      _id: '7',
+      title: 'Deep Calm',
+      description: 'Experience profound relaxation with this deep meditation session.',
+      mood: 'calm',
+      duration: 25,
+       audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3', // Very peaceful tones
+      image: 'https://images.pexels.com/photos/3822623/pexels-photo-3822623.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      category: 'deep relaxation',
+      instructor: 'James Wilson',
+    },
+    {
+      _id: '8',
+      title: 'Happy Thoughts',
+      description: 'Fill your mind with positivity and joy through this guided practice.',
+      mood: 'happy',
+      duration: 10,
+      audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3', // Cheerful melody
+      image: 'https://images.pexels.com/photos/2294362/pexels-photo-2294362.jpeg?auto=compress&cs=tinysrgb&w=500&h=400&fit=crop',
+      category: 'visualization',
+      instructor: 'Sophia Chen',
     },
   ];
 

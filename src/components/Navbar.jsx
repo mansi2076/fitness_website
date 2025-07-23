@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, logout } = useAuth();
@@ -24,14 +26,22 @@ const Navbar = () => {
     { path: '/diet', label: 'Diet' },
   ];
 
-  return (
+   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FH</span>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/010/761/472/small_2x/fh-logo-f-h-design-white-fh-letter-fh-letter-logo-design-initial-letter-fh-linked-circle-uppercase-monogram-logo-vector.jpg"
+                  alt="Fitness Hub Logo"
+                  className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/40';
+                    console.log("Failed to load logo at:", e.target.src);
+                  }}
+                />
               </div>
               <span className="text-xl font-bold text-gray-800">Fitness Hub</span>
             </Link>

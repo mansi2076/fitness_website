@@ -10,73 +10,469 @@ const WorkoutDetail = () => {
   const [timer, setTimer] = useState(0);
   const [isResting, setIsResting] = useState(false);
 
-  // Sample workout data
-  const sampleWorkout = {
-    _id: id,
-    title: 'Morning Sun Salutation',
-    description: 'Energize your body and mind with this classic morning sequence that combines gentle stretches with flowing movements.',
-    category: 'yoga',
-    difficulty: 'beginner',
-    duration: 20,
-    image: 'https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/4vTJHUDB5ak',
-    timeOfDay: 'morning',
-    yogaType: 'hatha',
-    targetMuscles: ['Full Body', 'Core', 'Flexibility'],
-    equipment: ['Yoga Mat'],
-    caloriesBurned: 150,
-    exercises: [
-      {
-        name: 'Mountain Pose',
-        duration: 60,
-        sets: 1,
-        reps: 'Hold',
-        rest: 10,
-      },
-      {
-        name: 'Forward Fold',
-        duration: 45,
-        sets: 1,
-        reps: 'Hold',
-        rest: 15,
-      },
-      {
-        name: 'Half Lift',
-        duration: 30,
-        sets: 1,
-        reps: 'Hold',
-        rest: 10,
-      },
-      {
-        name: 'Low Lunge',
-        duration: 60,
-        sets: 2,
-        reps: 'Hold each side',
-        rest: 20,
-      },
-      {
-        name: 'Downward Dog',
-        duration: 90,
-        sets: 1,
-        reps: 'Hold',
-        rest: 15,
-      },
-      {
-        name: 'Cobra Pose',
-        duration: 45,
-        sets: 1,
-        reps: 'Hold',
-        rest: 15,
-      },
-    ],
-  };
+  // Complete list of yoga workouts matching your yoga page
+  const yogaWorkouts = [
+    {
+      _id: '1',
+      title: 'Surya Namaskar (Sun Salutation)',
+      hindiName: 'सूर्य नमस्कार',
+      description: 'A sequence of 12 powerful yoga poses that provide a great cardiovascular workout',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 15,
+      image: 'https://assets.gqindia.com/photos/5d0b8563154641deba5969e3/16:9/w_2560%2Cc_limit/International%2520Yoga%2520Day-All%2520the%2520health%2520benefits%2520of%2520Surya%2520Namaskar.jpg',
+      videoUrl: 'https://youtu.be/YAq_oCjnkWY?si=owxqII57wFlXNPq6',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Full Body', 'Core', 'Flexibility'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 150,
+      exercises: [
+        {
+          name: 'Pranamasana (Prayer Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Hasta Uttanasana (Raised Arms Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Uttanasana (Standing Forward Bend)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Ashwa Sanchalanasana (Equestrian Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold each side',
+          rest: 10,
+        },
+        {
+          name: 'Adho Mukha Svanasana (Downward Dog)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Ashtanga Namaskara (Eight-Limbed Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Bhujangasana (Cobra Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+      ],
+    },
+    {
+      _id: '2',
+      title: 'Vinyasa Flow',
+      hindiName: 'विन्यास योग',
+      description: 'Dynamic sequence of poses synchronized with breath to build heat and endurance',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 45,
+      image: 'https://poweryogacanada.com/wp-content/uploads/2021/12/200TT-068.jpg',
+      videoUrl: 'https://youtu.be/GIITzjtk_f8?si=-5wUSm2sPXHhyOrP',
+      timeOfDay: 'morning',
+      yogaType: 'vinyasa',
+      targetMuscles: ['Arms', 'Core', 'Legs'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 300,
+      exercises: [
+        {
+          name: 'Tadasana (Mountain Pose)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Uttanasana (Forward Fold)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Ardha Uttanasana (Half Lift)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Adho Mukha Svanasana (Downward Dog)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Phalakasana (Plank Pose)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Chaturanga Dandasana (Four-Limbed Staff Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+      ],
+    },
+    {
+      _id: '3',
+      title: 'Balasana (Child\'s Pose)',
+      hindiName: 'बालासन',
+      description: 'Gentle resting pose that calms the mind and relieves stress and fatigue',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://images.healthshots.com/healthshots/en/uploads/2023/11/13110400/balasana-1.jpg',
+      videoUrl: 'https://youtu.be/2MJGg-dUKh0?si=jQK_A70OuydHt1qG',
+      timeOfDay: 'evening',
+      yogaType: 'restorative',
+      targetMuscles: ['Hips', 'Thighs', 'Back'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 20,
+      exercises: [
+        {
+          name: 'Balasana (Child\'s Pose)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '4',
+      title: 'Tadasana (Mountain Pose)',
+      hindiName: 'ताड़ासन',
+      description: 'Foundation of all standing poses, improves posture and balance',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://artimg.gympik.com/articles/wp-content/uploads/2017/08/Tadasana-Yoga-for-Glowing-Skin1.png',
+      videoUrl: 'https://youtu.be/rPJJIacKWsk?si=-e36H1QiXRcSCLsp',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Core', 'Spine'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 30,
+      exercises: [
+        {
+          name: 'Tadasana (Mountain Pose)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '5',
+      title: 'Adho Mukha Svanasana (Downward Dog)',
+      hindiName: 'अधो मुख श्वानासन',
+      description: 'Inversion pose that stretches and strengthens the entire body',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://miro.medium.com/v2/resize:fit:1400/1*tE3y72ROkd3B2X-T_5xNJg.png',
+      videoUrl: 'https://youtu.be/EC7RGJ975iM?si=Xo-gBpb2ShhavLWi',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Hamstrings', 'Shoulders', 'Arms'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 40,
+      exercises: [
+        {
+          name: 'Adho Mukha Svanasana (Downward Dog)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '6',
+      title: 'Virabhadrasana II (Warrior II)',
+      hindiName: 'वीरभद्रासन II',
+      description: 'Powerful standing pose that builds stamina and concentration',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://www.gaia.com/wp-content/uploads/WarriorII_ColleenSaidman.jpg',
+      videoUrl: 'https://youtu.be/4Ejz7IgODlU?si=UA8iqPdRKb0GDNoo',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Hips', 'Shoulders'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 50,
+      exercises: [
+        {
+          name: 'Virabhadrasana II (Warrior II)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold each side',
+          rest: 30,
+        },
+      ],
+    },
+    {
+      _id: '7',
+      title: 'Bhujangasana (Cobra Pose)',
+      hindiName: 'भुजंगासन',
+      description: 'Gentle backbend that strengthens the spine and opens the chest',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 5,
+      image: 'https://rishikeshashtangayogaschool.com/blog/wp-content/uploads/2021/11/cobra-pose_11zon.jpg',
+      videoUrl: 'https://youtu.be/fOdrW7nf9gw?si=v8Wuur4tFUtDZKWn',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Back', 'Chest', 'Shoulders'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 30,
+      exercises: [
+        {
+          name: 'Bhujangasana (Cobra Pose)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '8',
+      title: 'Savasana (Corpse Pose)',
+      hindiName: 'शवासन',
+      description: 'Final relaxation pose that allows the body to absorb benefits of practice',
+      category: 'yoga',
+      difficulty: 'beginner',
+      duration: 10,
+      image: 'https://wp.insighttimer.com/blog/wp-content/uploads/2020/02/savasana-in-yoga.jpg',
+      videoUrl: 'https://youtu.be/1VYlOKUdylM?si=2ZeZ9MnlItBk2rqI',
+      timeOfDay: 'night',
+      yogaType: 'restorative',
+      targetMuscles: ['Full Body Relaxation'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 10,
+      exercises: [
+        {
+          name: 'Savasana (Corpse Pose)',
+          duration: 600,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '9',
+      title: 'Trikonasana (Triangle Pose)',
+      hindiName: 'त्रिकोणासन',
+      description: 'Standing pose that improves balance and stretches the sides of the body',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 5,
+      image: 'https://vinyasayogaacademy.com/blog/wp-content/uploads/2020/03/triangle-pose.jpg',
+      videoUrl: 'https://youtu.be/S6gB0QHbWFE?si=ooQK8sWxpdfyBr8F',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Legs', 'Hips', 'Side Body'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 40,
+      exercises: [
+        {
+          name: 'Trikonasana (Triangle Pose)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold each side',
+          rest: 30,
+        },
+      ],
+    },
+    {
+      _id: '10',
+      title: 'Sirsasana (Headstand)',
+      hindiName: 'शीर्षासन',
+      description: 'Advanced inversion that improves circulation and focus',
+      category: 'yoga',
+      difficulty: 'advanced',
+      duration: 5,
+      image: 'https://zuda.b-cdn.net/wp-content/uploads/2023/01/Salamba-Sirsasana.png',
+      videoUrl: 'https://youtu.be/VrenTA2IFjI?si=DhpY6rbNXMC_3rsW',
+      timeOfDay: 'morning',
+      yogaType: 'ashtanga',
+      targetMuscles: ['Shoulders', 'Arms', 'Core'],
+      equipment: ['Yoga Mat', 'Wall Support'],
+      caloriesBurned: 60,
+      exercises: [
+        {
+          name: 'Sirsasana (Headstand)',
+          duration: 300,
+          sets: 1,
+          reps: 'Hold',
+          rest: 0,
+        },
+      ],
+    },
+    {
+      _id: '11',
+      title: 'Padmasana (Lotus Pose)',
+      hindiName: 'पद्मासन',
+      description: 'Classic meditation pose that promotes calmness and focus',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 10,
+      image: 'https://www.yogateket.com/image/original/Padmasana_lotus.jpg',
+      videoUrl: 'https://youtu.be/VPG3L4KNff4?si=-iOI-wGGZ5OdXnDV',
+      timeOfDay: 'evening',
+      yogaType: 'hatha',
+      targetMuscles: ['Hips', 'Knees', 'Ankles'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 20,
+      exercises: [
+        {
+          name: 'Tadasana (Mountain Pose)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Uttanasana (Forward Fold)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Ardha Uttanasana (Half Lift)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Adho Mukha Svanasana (Downward Dog)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Phalakasana (Plank Pose)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Chaturanga Dandasana (Four-Limbed Staff Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+      ],
+    },
+    {
+      _id: '12',
+      title: 'Dhanurasana (Bow Pose)',
+      hindiName: 'धनुरासन',
+      description: 'Backbend that strengthens the back and opens the chest',
+      category: 'yoga',
+      difficulty: 'intermediate',
+      duration: 5,
+      image: 'https://www.vinyasayogaashram.com/blog/wp-content/uploads/2021/04/dhanurasana.jpg',
+      videoUrl: 'https://youtu.be/c6CgFt4onGk?si=iC9LeS056-8rEsSN',
+      timeOfDay: 'morning',
+      yogaType: 'hatha',
+      targetMuscles: ['Back', 'Shoulders', 'Chest'],
+      equipment: ['Yoga Mat'],
+      caloriesBurned: 50,
+      exercises: [
+        {
+          name: 'Tadasana (Mountain Pose)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Uttanasana (Forward Fold)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Ardha Uttanasana (Half Lift)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 10,
+        },
+        {
+          name: 'Adho Mukha Svanasana (Downward Dog)',
+          duration: 60,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Phalakasana (Plank Pose)',
+          duration: 45,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+        {
+          name: 'Chaturanga Dandasana (Four-Limbed Staff Pose)',
+          duration: 30,
+          sets: 1,
+          reps: 'Hold',
+          rest: 15,
+        },
+      ],
+
+    },
+  ];
 
   useEffect(() => {
-    // Simulate API call
+    // Find the workout by ID from the sample data
+    const foundWorkout = yogaWorkouts.find(w => w._id === id);
+    
+    // Simulate API call with timeout
     setTimeout(() => {
-      setWorkout(sampleWorkout);
+      if (foundWorkout) {
+        setWorkout(foundWorkout);
+      }
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, [id]);
 
   useEffect(() => {
@@ -156,6 +552,26 @@ const WorkoutDetail = () => {
     }
   };
 
+  // Function to convert YouTube URL to embed format
+  const getEmbedUrl = (url) => {
+    if (!url) return '';
+    
+    // If already an embed URL, return as is
+    if (url.includes('embed')) return url;
+    
+    // Extract video ID from various YouTube URL formats
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    
+    const videoId = (match && match[2].length === 11) ? match[2] : null;
+    
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    
+    return url;
+  };
+
   if (loading) {
     return (
       <div className="pt-24 min-h-screen flex items-center justify-center">
@@ -214,10 +630,18 @@ const WorkoutDetail = () => {
                     {workout.duration} min
                   </span>
                 </div>
+                {workout.hindiName && (
+                  <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
+                    {workout.hindiName}
+                  </div>
+                )}
               </div>
               
               <div className="p-6">
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">{workout.title}</h1>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{workout.title}</h1>
+                {workout.hindiName && (
+                  <p className="text-gray-500 text-lg mb-2">{workout.hindiName}</p>
+                )}
                 <p className="text-gray-600 mb-6 leading-relaxed">{workout.description}</p>
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -274,8 +698,8 @@ const WorkoutDetail = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Video Tutorial</h3>
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
-                  src={workout.videoUrl}
-                  className="w-full h-64 rounded-lg"
+                  src={getEmbedUrl(workout.videoUrl)}
+                  className="w-full h-96 rounded-lg"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   title={workout.title}
@@ -284,7 +708,7 @@ const WorkoutDetail = () => {
             </div>
           </div>
 
-          {/* Workout Timer and Controls */}
+          {/* Workout Timer and Controls - UNCHANGED FROM ORIGINAL */}
           <div className="space-y-6">
             {isStarted && (
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
@@ -299,6 +723,11 @@ const WorkoutDetail = () => {
                   <div className="text-lg text-gray-600">
                     {isResting ? 'Rest' : workout.exercises[currentExercise]?.name}
                   </div>
+                  {!isResting && workout.exercises[currentExercise]?.reps && (
+                    <div className="text-sm text-gray-500 mt-1">
+                      {workout.exercises[currentExercise].reps}
+                    </div>
+                  )}
                 </div>
                 
                 <div className="mb-4">
@@ -306,7 +735,7 @@ const WorkoutDetail = () => {
                     <div
                       className="bg-primary-500 h-2 rounded-full transition-all duration-300"
                       style={{
-                        width: `${((currentExercise / workout.exercises.length) * 100)}%`
+                        width: `${((currentExercise + (isResting ? 0.5 : 0)) / workout.exercises.length) * 100}%`
                       }}
                     />
                   </div>
@@ -364,7 +793,7 @@ const WorkoutDetail = () => {
                       <div>
                         <h4 className="font-medium text-gray-900">{exercise.name}</h4>
                         <p className="text-sm text-gray-600">
-                          {exercise.duration}s • {exercise.reps}
+                          {formatTime(exercise.duration)} • {exercise.reps}
                         </p>
                       </div>
                       <div className="text-sm text-gray-500">
